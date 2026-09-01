@@ -1,654 +1,730 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Žika slika - foto studio u Beogradu</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --accent: #6796bf;
-      --accent-dark: #4f7ea6;
-      --ink: #1f2328;
-      --muted: #5b6370;
-      --line: #e4e7ec;
-      --bg: #ffffff;
-      --off: #f6f8fa;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Žika slika - Foto studio Beograd | Svadbe, krštenja, dokumenta</title>
+<meta name="description" content="Foto studio Žika slika u Beogradu - slikanje svadbi, krštenja, rođendana, terensko i studijsko slikanje, uramljivanje fotografija i slike za dokumenta za 5 minuta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent:#6796bf;
+    --accent-dark:#547ea3;
+    --text:#242424;
+    --text-light:#5c5c5c;
+    --bg:#ffffff;
+    --bg-off:#f6f7f9;
+    --border:#e3e5e8;
+  }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+  *{box-sizing:border-box;margin:0;padding:0;}
 
-    html { scroll-behavior: smooth; }
+  html{scroll-behavior:smooth;}
 
-    body {
-      font-family: 'PT Sans', sans-serif;
-      color: var(--ink);
-      background: var(--bg);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
+  body{
+    font-family:'PT Sans', sans-serif;
+    color:var(--text);
+    background:var(--bg);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
 
-    img { max-width: 100%; display: block; }
+  img{max-width:100%;display:block;}
 
-    a { color: inherit; text-decoration: none; }
+  a{color:inherit;text-decoration:none;}
 
-    .wrap {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding-left: 24px;
-      padding-right: 24px;
-    }
+  ul{list-style:none;}
 
-    h1, h2, h3 {
-      font-family: 'PT Sans', sans-serif;
-      line-height: 1.15;
-      font-weight: 700;
-    }
+  h1,h2,h3{
+    font-family:'PT Sans', sans-serif;
+    font-weight:700;
+    line-height:1.2;
+    color:var(--text);
+  }
 
-    /* NAVBAR */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: #fff;
-      border-bottom: 1px solid var(--line);
-    }
+  h1{font-size:3rem;}
+  h2{font-size:2rem;}
+  h3{font-size:1.25rem;}
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 70px;
-    }
+  p{color:var(--text-light);}
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      font-size: 20px;
-      letter-spacing: 0.5px;
-    }
+  .wrap{
+    max-width:1280px;
+    margin:0 auto;
+    padding-left:24px;
+    padding-right:24px;
+  }
 
-    .logo .mark {
-      width: 12px;
-      height: 12px;
-      background: var(--accent);
-      border-radius: 3px;
-      flex: none;
-    }
+  @media(max-width:768px){
+    .wrap{padding-left:20px;padding-right:20px;}
+    h1{font-size:2.25rem;}
+    h2{font-size:1.6rem;}
+  }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
+  section{
+    padding-top:96px;
+    padding-bottom:96px;
+  }
 
-    .nav-links a { color: var(--muted); font-size: 15px; }
-    .nav-links a:hover { color: var(--ink); }
+  @media(max-width:768px){
+    section{padding-top:56px;padding-bottom:56px;}
+  }
 
-    .btn {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      padding: 12px 22px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 15px;
-      border: none;
-      cursor: pointer;
-      transition: background 0.15s ease;
-    }
+  .eyebrow{
+    color:var(--accent);
+    font-weight:700;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    font-size:0.85rem;
+    margin-bottom:12px;
+    display:block;
+  }
 
-    .btn:hover { background: var(--accent-dark); }
+  .section-head{
+    max-width:640px;
+    margin-bottom:56px;
+  }
 
-    .btn-outline {
-      background: transparent;
-      color: var(--accent);
-      border: 1px solid var(--accent);
-    }
-    .btn-outline:hover { background: var(--accent); color: #fff; }
+  .section-head p{
+    max-width:65ch;
+    margin-top:12px;
+    font-size:1.05rem;
+  }
 
-    .hamburger {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-    }
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--ink);
-      margin: 5px 0;
-      transition: 0.2s;
-    }
+  .lead{
+    font-size:1.125rem;
+    max-width:65ch;
+  }
 
-    .mobile-menu {
-      display: none;
-      border-top: 1px solid var(--line);
-      background: #fff;
-    }
-    .mobile-menu.open { display: block; }
-    .mobile-menu nav {
-      display: flex;
-      flex-direction: column;
-      padding-top: 12px;
-      padding-bottom: 20px;
-    }
-    .mobile-menu a {
-      padding: 12px 0;
-      color: var(--muted);
-      border-bottom: 1px solid var(--line);
-    }
-    .mobile-menu .btn {
-      margin-top: 16px;
-      text-align: center;
-    }
+  /* Buttons */
+  .btn{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff;
+    padding:14px 28px;
+    border-radius:8px;
+    font-weight:700;
+    border:1px solid var(--accent);
+    cursor:pointer;
+    font-size:1rem;
+    font-family:inherit;
+    text-align:center;
+  }
+  .btn:hover{
+    background:var(--accent-dark);
+    border-color:var(--accent-dark);
+  }
+  .btn-outline{
+    background:transparent;
+    color:var(--accent);
+  }
+  .btn-outline:hover{
+    background:var(--accent);
+    color:#fff;
+  }
 
-    /* HERO */
-    .hero {
-      padding-top: 96px;
-      padding-bottom: 96px;
-      border-bottom: 1px solid var(--line);
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 1fr;
-      gap: 56px;
-      align-items: center;
-    }
-    .hero h1 {
-      font-size: 52px;
-      letter-spacing: -0.5px;
-    }
-    .hero p.lead {
-      font-size: 18px;
-      color: var(--muted);
-      margin-top: 20px;
-      max-width: 60ch;
-    }
-    .hero .cta-row {
-      margin-top: 32px;
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-    .hero-img {
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-    }
-    .hero-img img { width: 100%; height: 100%; object-fit: cover; }
+  /* NAVBAR */
+  .navbar{
+    position:sticky;
+    top:0;
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    z-index:100;
+  }
+  .navbar__inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:84px;
+    position:relative;
+  }
+  .logo{display:flex;align-items:center;}
+  .logo img{height:34px;width:auto;}
+  .logo-mobile{display:none;}
 
-    .eyebrow {
-      display: inline-block;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 14px;
-    }
+  .nav-menu{
+    display:flex;
+    align-items:center;
+    gap:40px;
+  }
+  .nav-links{
+    display:flex;
+    gap:28px;
+  }
+  .nav-links a{
+    font-weight:700;
+    font-size:0.98rem;
+  }
+  .nav-links a:hover{color:var(--accent);}
 
-    /* SECTIONS */
-    section { border-bottom: 1px solid var(--line); }
+  .nav-toggle{display:none;}
+  .hamburger{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+    width:28px;
+    height:22px;
+    cursor:pointer;
+  }
+  .hamburger span{
+    display:block;
+    height:2px;
+    width:100%;
+    background:var(--text);
+  }
 
-    .sec {
-      padding-top: 96px;
-      padding-bottom: 96px;
-    }
+  @media(max-width:991px){
+    .nav-links, .nav-btn{display:none;}
+    .logo-desktop{display:none;}
+    .logo-mobile{display:block;height:26px;}
+    .hamburger{display:flex;}
 
-    .sec-head { max-width: 640px; }
-    .sec-head h2 { font-size: 36px; letter-spacing: -0.3px; }
-    .sec-head p {
-      color: var(--muted);
-      margin-top: 14px;
-      font-size: 17px;
-      max-width: 62ch;
+    .nav-menu{
+      position:absolute;
+      top:100%;
+      left:0;
+      right:0;
+      background:#fff;
+      flex-direction:column;
+      align-items:stretch;
+      gap:0;
+      max-height:0;
+      overflow:hidden;
+      transition:max-height 0.3s ease;
+      border-bottom:1px solid var(--border);
     }
+    .nav-toggle:checked ~ .nav-menu{
+      max-height:420px;
+    }
+    .nav-links{
+      display:flex;
+      flex-direction:column;
+      gap:0;
+      padding:12px 0;
+    }
+    .nav-links a{
+      display:block;
+      padding:12px 20px;
+      border-bottom:1px solid var(--border);
+    }
+    .nav-btn{
+      display:block;
+      margin:16px 20px 20px;
+      text-align:center;
+    }
+  }
 
-    /* FAST DOCS BANNER */
-    .fast {
-      background: var(--off);
-    }
-    .fast-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-      justify-items: center;
-      text-align: center;
-    }
-    .fast-text { max-width: 720px; }
-    .fast h2 { font-size: 34px; letter-spacing: -0.3px; }
-    .fast p { color: var(--muted); margin-top: 14px; font-size: 17px; }
-    .fast .big-num {
-      display: inline-block;
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--accent);
-      border: 1px solid var(--accent);
-      padding: 6px 14px;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-    .fast-img { border-radius: 8px; overflow: hidden; border: 1px solid var(--line); width: 100%; max-width: 720px; }
-    .fast-img img { display: block; width: 100%; height: 320px; object-fit: cover; }
+  /* HERO */
+  .hero{
+    padding-top:100px;
+    padding-bottom:100px;
+    background:var(--bg-off);
+  }
+  @media(max-width:768px){
+    .hero{padding-top:64px;padding-bottom:64px;}
+  }
+  .hero__inner{
+    max-width:720px;
+  }
+  .hero h1{margin-bottom:20px;}
+  .hero p{
+    font-size:1.15rem;
+    max-width:60ch;
+    margin-bottom:32px;
+  }
 
-    /* SERVICES GRID */
-    .cards {
-      margin-top: 48px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-    .card {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      overflow: hidden;
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-    }
-    .card .thumb { width: 100%; height: 200px; object-fit: cover; }
-    .card .body {
-      padding-top: 22px;
-      padding-bottom: 24px;
-      padding-left: 22px;
-      padding-right: 22px;
-    }
-    .card h3 { font-size: 20px; }
-    .card p { color: var(--muted); margin-top: 8px; font-size: 15px; }
+  /* SERVICES GRID */
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--border);
+    border:1px solid var(--border);
+  }
+  .service-card{
+    background:#fff;
+    padding:36px 32px;
+  }
+  .service-card .icon{
+    width:40px;
+    height:40px;
+    margin-bottom:20px;
+  }
+  .service-card h3{margin-bottom:10px;}
+  .service-card p{font-size:0.98rem;}
 
-    .ph {
-      background: #e9edf1;
-      color: #7a828d;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      padding: 20px;
-    }
+  @media(max-width:900px){
+    .services-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media(max-width:600px){
+    .services-grid{grid-template-columns:1fr;}
+  }
 
-    /* WHY */
-    .why-grid {
-      margin-top: 48px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-    .why-item { border-top: 1px solid var(--line); padding-top: 20px; }
-    .why-item svg { width: 30px; height: 30px; stroke: var(--accent); margin-bottom: 12px; }
-    .why-item h3 { font-size: 19px; }
-    .why-item p { color: var(--muted); margin-top: 8px; font-size: 15px; }
+  /* DOCUMENTS SECTION */
+  .docs-section{background:var(--bg-off);}
+  .docs-flex{
+    display:flex;
+    gap:64px;
+    align-items:center;
+  }
+  .docs-flex .text{flex:1;min-width:280px;}
+  .docs-flex .visual{flex:1;min-width:280px;}
+  .docs-flex ul{margin-top:24px;}
+  .docs-flex li{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    margin-bottom:16px;
+    color:var(--text-light);
+  }
+  .docs-flex li svg{
+    flex-shrink:0;
+    width:20px;
+    height:20px;
+    margin-top:3px;
+  }
+  .docs-image-main{
+    border:1px solid var(--border);
+    aspect-ratio:4/3;
+    overflow:hidden;
+  }
+  .docs-image-main img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .docs-thumbs{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-top:12px;
+  }
+  .docs-thumbs .thumb{
+    border:1px solid var(--border);
+    aspect-ratio:1/1;
+    overflow:hidden;
+  }
+  .docs-thumbs .thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .docs-flex .btn{margin-top:8px;}
 
-    /* DOC PHOTOS */
-    .docs-strip {
-      margin-top: 40px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-    .docs-strip .frame {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .docs-strip img { width: 100%; height: 260px; object-fit: cover; }
+  @media(max-width:768px){
+    .docs-flex{flex-direction:column;}
+  }
 
-    /* CONTACT / HOURS */
-    .contact { background: var(--off); }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 56px;
-    }
-    .info-row {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      padding-top: 18px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid var(--line);
-    }
-    .info-row svg { width: 22px; height: 22px; stroke: var(--accent); flex: none; margin-top: 3px; }
-    .info-row strong { display: block; font-size: 16px; }
-    .info-row span { color: var(--muted); font-size: 15px; }
-    .contact .cta-row { margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap; }
+  /* GALLERY */
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:20px;
+  }
+  .gallery-item{
+    border:1px solid var(--border);
+  }
+  .gallery-item .img-wrap{
+    aspect-ratio:4/5;
+    overflow:hidden;
+  }
+  .gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .gallery-item .caption{
+    padding:14px 16px;
+    font-weight:700;
+    font-size:0.95rem;
+    border-top:1px solid var(--border);
+  }
 
-    .hours-box {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding-top: 28px;
-      padding-bottom: 28px;
-      padding-left: 28px;
-      padding-right: 28px;
-    }
-    .hours-box h3 { font-size: 22px; margin-bottom: 16px; }
-    .hours-line {
-      display: flex;
-      justify-content: space-between;
-      padding-top: 12px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--line);
-      font-size: 15px;
-    }
-    .hours-line:last-child { border-bottom: none; }
-    .hours-line span:last-child { color: var(--muted); }
+  @media(max-width:900px){
+    .gallery-grid{grid-template-columns:repeat(2, 1fr);}
+  }
+  @media(max-width:480px){
+    .gallery-grid{grid-template-columns:1fr;}
+  }
 
-    /* FOOTER */
-    footer {
-      padding-top: 48px;
-      padding-bottom: 48px;
-      background: #fff;
-    }
-    .foot-grid {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-    .foot-grid p { color: var(--muted); font-size: 14px; }
-    .foot-links { display: flex; gap: 22px; }
-    .foot-links a { color: var(--muted); font-size: 14px; }
-    .foot-links a:hover { color: var(--ink); }
+  /* ABOUT */
+  .about-flex{
+    display:flex;
+    gap:64px;
+    align-items:center;
+  }
+  .about-flex .text{flex:1;min-width:280px;}
+  .about-flex .visual{flex:1;min-width:280px;}
+  .about-flex p{margin-bottom:16px;}
+  .placeholder-block{
+    background:var(--bg-off);
+    border:1px solid var(--border);
+    aspect-ratio:4/3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#8a8a8a;
+    font-weight:700;
+    font-size:0.9rem;
+    letter-spacing:0.04em;
+    padding-left:16px;
+    padding-right:16px;
+  }
 
-    /* RESPONSIVE */
-    @media (max-width: 991px) {
-      .nav-links { display: none; }
-      .nav > .btn { display: none; }
-      .hamburger { display: block; }
-      .hero-grid { grid-template-columns: 1fr; gap: 36px; }
-      .cards { grid-template-columns: repeat(2, 1fr); }
-      .why-grid { grid-template-columns: 1fr 1fr; }
-    }
+  @media(max-width:768px){
+    .about-flex{flex-direction:column;}
+  }
 
-    @media (max-width: 768px) {
-      .hero { padding-top: 64px; padding-bottom: 64px; }
-      .sec, .contact .sec { padding-top: 64px; padding-bottom: 64px; }
-      .hero h1 { font-size: 38px; }
-      .sec-head h2 { font-size: 28px; }
-      .fast-grid, .contact-grid, .fast .sec { grid-template-columns: 1fr; gap: 32px; }
-      .fast-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .cards { grid-template-columns: 1fr; }
-      .why-grid { grid-template-columns: 1fr; }
-      .docs-strip { grid-template-columns: 1fr; }
-      .wrap { padding-left: 20px; padding-right: 20px; }
-    }
+  /* CONTACT */
+  .contact-section{background:var(--bg-off);}
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:64px;
+    align-items:start;
+  }
+  .contact-card{
+    background:#fff;
+    border:1px solid var(--border);
+    padding:40px;
+  }
+  .contact-row{
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+    margin-bottom:28px;
+  }
+  .contact-row:last-child{margin-bottom:0;}
+  .contact-row svg{
+    width:24px;
+    height:24px;
+    flex-shrink:0;
+    margin-top:2px;
+  }
+  .contact-row h3{font-size:1rem;margin-bottom:4px;}
+  .contact-row p{font-size:0.98rem;margin:0;}
+  .hours-table{width:100%;border-collapse:collapse;}
+  .hours-table td{
+    padding:10px 0;
+    border-bottom:1px solid var(--border);
+    font-size:0.98rem;
+  }
+  .hours-table td:last-child{
+    text-align:right;
+    font-weight:700;
+    color:var(--text);
+  }
+  .hours-table tr:last-child td{border-bottom:none;}
 
-    @media (max-width: 480px) {
-      .hero h1 { font-size: 32px; }
-    }
-  </style>
+  @media(max-width:900px){
+    .contact-grid{grid-template-columns:1fr;gap:40px;}
+  }
+
+  /* FOOTER */
+  footer{
+    border-top:1px solid var(--border);
+    padding-top:64px;
+    padding-bottom:40px;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:48px;
+    margin-bottom:48px;
+  }
+  .footer-col h3{font-size:1rem;margin-bottom:16px;}
+  .footer-col p{font-size:0.95rem;margin-bottom:8px;}
+  .footer-col ul li{margin-bottom:10px;}
+  .footer-col ul a{font-size:0.95rem;color:var(--text-light);}
+  .footer-col ul a:hover{color:var(--accent);}
+  .footer-logo img{height:30px;margin-bottom:16px;}
+  .footer-bottom{
+    border-top:1px solid var(--border);
+    padding-top:24px;
+    font-size:0.88rem;
+    color:var(--text-light);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+
+  @media(max-width:768px){
+    .footer-grid{grid-template-columns:1fr;gap:32px;}
+  }
+</style>
 </head>
 <body>
 
-  <header>
-    <div class="wrap nav">
-      <a href="#" class="logo">
-        <span class="mark"></span>
-        Žika slika
+  <header class="navbar">
+    <div class="wrap navbar__inner">
+      <a href="#" class="logo" aria-label="Žika slika - početna">
+        <img class="logo-desktop" src="assets/logo.png" alt="Žika slika logo">
+        <img class="logo-mobile" src="assets/Foto-Studio-Zika-Slika-mob.png" alt="Žika slika logo">
       </a>
-      <div class="nav-links">
-        <a href="#usluge">Usluge</a>
-        <a href="#dokumenta">Dokumenta</a>
-        <a href="#zasto">Zašto mi</a>
-        <a href="#kontakt">Kontakt</a>
-      </div>
-      <a href="#kontakt" class="btn">Zakaži slikanje</a>
-      <button class="hamburger" id="hamburger" aria-label="Otvori meni">
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="hamburger" aria-label="Otvori meni">
         <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="mobile-menu wrap" id="mobileMenu">
-      <nav>
-        <a href="#usluge">Usluge</a>
-        <a href="#dokumenta">Dokumenta</a>
-        <a href="#zasto">Zašto mi</a>
-        <a href="#kontakt">Kontakt</a>
-        <a href="#kontakt" class="btn">Zakaži slikanje</a>
+      </label>
+
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#usluge">Usluge</a></li>
+          <li><a href="#dokumenta">Dokumenta</a></li>
+          <li><a href="#galerija">Galerija</a></li>
+          <li><a href="#o-nama">O nama</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+        <a href="tel:0112445678" class="btn nav-btn">Pozovite nas</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="eyebrow">Foto studio · Beograd</span>
-        <h1>Slikamo dane kojih ćete se sećati.</h1>
-        <p class="lead">Svadbe, krštenja, rođendani, teren, studio. A ako vam trebaju fotografije za dokumenta, uđete i za pet minuta izađete sa četiri gotove slike u ruci.</p>
-        <div class="cta-row">
-          <a href="#kontakt" class="btn">Pozovite nas</a>
-          <a href="#usluge" class="btn btn-outline">Pogledajte usluge</a>
-        </div>
-      </div>
-      <div class="hero-img">
-        <img src="assets/IGI_6183.jpg" alt="Mladoženja ljubi mladu u ruku dok sede na klupi u parku na dan venčanja" />
-      </div>
+    <div class="wrap hero__inner">
+      <h1>Fotografije za trenutke koje se ne ponavljaju</h1>
+      <p>Slikamo svadbe, krštenja i rođendane, izlazimo na teren i radimo u studiju. Treba vam slika za indeks ili đačku knjižicu? Napravimo četiri fotografije za pet minuta, dok čekate.</p>
+      <a href="#kontakt" class="btn">Zakažite slikanje</a>
     </div>
   </section>
 
-  <!-- FAST DOCS -->
-  <section class="fast">
-    <div class="wrap sec fast-grid">
-      <div class="fast-text">
-        <span class="eyebrow">Fotografije za dokumenta</span>
-        <h2>Četiri fotografije za pet minuta.</h2>
-        <p>Trebaju vam slike za pasoš, ličnu, indeks ili đačku knjižicu? Dođite bez zakazivanja. Slikamo, obradimo i odštampamo dok čekate. Format radimo po pravilima za svaki dokument, pa se ne vraćate zbog toga da nešto nije prošlo na šalteru.</p>
-        <span class="big-num">4 slike · gotovo za ~5 min</span>
-      </div>
-      <div class="fast-img">
-        <img src="assets/Slikanje-za-dokumenta.jpg" alt="Portret žene u poslovnoj odeći, fotografija za dokument snimljena u studiju" />
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
   <section id="usluge">
-    <div class="wrap sec">
-      <div class="sec-head">
-        <span class="eyebrow">Šta radimo</span>
-        <h2>Od venčanja do fotografija za indeks.</h2>
-        <p>Radimo na terenu i u studiju. Kažete nam kakav događaj imate, a mi predložimo kako da ga snimimo da posle imate slike koje ćete stvarno gledati.</p>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Usluge</span>
+        <h2>Šta radimo</h2>
+        <p>Od venčanja do slike za pasoš - pokrivamo sve prilike kad vam treba dobra fotografija.</p>
       </div>
 
-      <div class="cards">
-        <div class="card">
-          <img class="thumb" src="assets/IGI_6183.jpg" alt="Mlada i mladoženja na dan venčanja u parku" />
-          <div class="body">
-            <h3>Svadbe</h3>
-            <p>Ceo dan uz vas, od priprema do prvog plesa. Snimamo tako da se ne osećate kao da vam neko stalno gura foto-aparat u lice.</p>
-          </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#6796bf" stroke-width="1.5"><circle cx="9" cy="14" r="5"/><circle cx="15" cy="14" r="5"/></svg>
+          <h3>Slikanje svadbi</h3>
+          <p>Pratimo vas od jutarnjih priprema do prve pesme na slavlju. Snimamo obred, fotografišemo goste i hvatamo trenutke koje inače propustite.</p>
         </div>
 
-        <div class="card">
-          <img class="thumb" src="assets/Krstenje-16.jpg" alt="Sveštenik drži svećnjak dok majka i devojčica sa svećom stoje u crkvi na krštenju" />
-          <div class="body">
-            <h3>Krštenja</h3>
-            <p>Snimamo obred u crkvi i slavlje posle. Diskretno, bez ometanja, sa slikama koje ostaju u porodici.</p>
-          </div>
+        <div class="service-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#6796bf" stroke-width="1.5"><path d="M12 2c1 2-1 3-1 5a1 1 0 002 0c0-2-2-3-1-5z"/><rect x="10" y="7" width="4" height="14"/></svg>
+          <h3>Krštenja</h3>
+          <p>Dolazimo u crkvu na sam obred i ostajemo na proslavi posle. Poseban fokus stavljamo na dete, kumove i roditelje.</p>
         </div>
 
-        <div class="card">
-          <div class="thumb ph" style="height:200px;">FOTOGRAFIJA SA ROĐENDANA</div>
-          <div class="body">
-            <h3>Rođendani i proslave</h3>
-            <p>Prvi rođendan, punoletstvo ili proslava u društvu. Dolazimo tamo gde slavite.</p>
-          </div>
+        <div class="service-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#6796bf" stroke-width="1.5"><path d="M4 20v-6a2 2 0 012-2h12a2 2 0 012 2v6"/><path d="M4 20h16"/><path d="M8 12V9M12 12V9M16 12V9"/></svg>
+          <h3>Rođendani i prijemi</h3>
+          <p>Dečji rođendan, godišnjica, poslovni prijem - slikamo atmosferu i ljude, ne samo pozu pred objektivom.</p>
         </div>
 
-        <div class="card">
-          <img class="thumb" src="assets/3-1.jpg" alt="Fudbaleri u duelu za loptu tokom utakmice, sportsko slikanje na terenu" />
-          <div class="body">
-            <h3>Terensko slikanje</h3>
-            <p>Enterijer, eksterijer, građevinski objekti i sport. Dolazimo sa opremom na lokaciju.</p>
-          </div>
+        <div class="service-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#6796bf" stroke-width="1.5"><path d="M12 21s7-6.5 7-11a7 7 0 10-14 0c0 4.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <h3>Terensko slikanje</h3>
+          <p>Izlazimo na lice mesta i slikamo enterijere, eksterijere i građevinske objekte. Javite se, dogovorimo termin i dolazimo sa opremom.</p>
         </div>
 
-        <div class="card">
-          <img class="thumb" src="assets/2.jpg" alt="Portret žene tamne kose u plavoj jakni, studijsko modno slikanje" />
-          <div class="body">
-            <h3>Modno i studijsko slikanje</h3>
-            <p>Portreti, modni kadrovi i slike za portfolio u studiju sa kontrolisanim svetlom.</p>
-          </div>
+        <div class="service-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#6796bf" stroke-width="1.5"><path d="M12 2l4 6H8l4-6z"/><path d="M6 22l2-10h8l2 10"/></svg>
+          <h3>Modno i studijsko slikanje</h3>
+          <p>Portfolio, portret ili slike za proizvod - radimo u studiju sa rasvetom i pozadinom po dogovoru.</p>
         </div>
 
-        <div class="card">
-          <img class="thumb" src="assets/Prijemi-05.jpg" alt="Publika u svečanoj sali tokom prijema, snimanje događaja" />
-          <div class="body">
-            <h3>Prijemi i događaji</h3>
-            <p>Svečanosti, prijemi i skupovi. Snimamo goste, govornike i atmosferu u sali.</p>
-          </div>
+        <div class="service-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#6796bf" stroke-width="1.5"><rect x="4" y="4" width="16" height="16"/><rect x="7.5" y="7.5" width="9" height="9"/></svg>
+          <h3>Uramljivanje fotografija</h3>
+          <p>Donesete fotografiju ili je štampamo mi, a onda je uramimo tako da bude spremna za zid ili poklon.</p>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- DOC PHOTOS STRIP -->
-  <section id="dokumenta">
-    <div class="wrap sec">
-      <div class="sec-head">
-        <span class="eyebrow">Za šalter i za rok</span>
-        <h2>Uramljivanje i slike za dokumenta.</h2>
-        <p>Osim brzih fotografija za dokumenta, uramljujemo slike koje želite da okačite. Donesete fotografiju, izaberete ram, mi je spremimo za zid.</p>
-      </div>
+        <div class="service-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#6796bf" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="12" r="2"/><path d="M13 10h6M13 14h4"/></svg>
+          <h3>Fotografije za dokumenta</h3>
+          <p>Četiri slike za indeks ili đačku knjižicu, gotove za pet minuta. Ne morate da zakazujete, samo svratite u radno vreme.</p>
+        </div>
 
-      <div class="docs-strip">
-        <div class="frame">
-          <img src="assets/1.jpg" alt="Portret devojke duge kose, fotografija za đačku knjižicu" />
-        </div>
-        <div class="frame">
-          <img src="assets/3.jpg" alt="Portret mladića u tamnoj rolki, fotografija za indeks" />
-        </div>
-        <div class="frame">
-          <div class="ph" style="height:260px;">FOTOGRAFIJA URAMLJENE SLIKE</div>
+        <div class="service-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#6796bf" stroke-width="1.5"><path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          <h3>Portreti i porodične slike</h3>
+          <p>Slikanje za lične potrebe, poklone ili sećanje - u studiju ili kod vas, kako vam više odgovara.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHY -->
-  <section id="zasto">
-    <div class="wrap sec">
-      <div class="sec-head">
-        <span class="eyebrow">Zašto baš mi</span>
-        <h2>Dođete jednom, znate na čemu ste.</h2>
-        <p>Radimo posao dugo. Kroz studio je prošao svaki mogući dokument i skoro svaka vrsta slavlja u Beogradu.</p>
+  <section id="dokumenta" class="docs-section">
+    <div class="wrap docs-flex">
+      <div class="text">
+        <span class="eyebrow">Brza usluga</span>
+        <h2>Slika za dokumenta za pet minuta</h2>
+        <p class="lead">Studenti dolaze pred rok za indeks, đaci pred upis - znamo kako to ide. Sednete, slikamo, štampamo, gotovi ste za pet minuta.</p>
+        <ul>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6796bf" stroke-width="1.5"><path d="M5 12l4 4L19 6"/></svg>
+            <span>Četiri fotografije po standardu za indeks i đačku knjižicu</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6796bf" stroke-width="1.5"><path d="M5 12l4 4L19 6"/></svg>
+            <span>Štampa odmah, na licu mesta, dok sačekate</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6796bf" stroke-width="1.5"><path d="M5 12l4 4L19 6"/></svg>
+            <span>Dolazite bez zakazivanja, u radno vreme studija</span>
+          </li>
+        </ul>
+        <a href="#kontakt" class="btn">Dođite u studio</a>
       </div>
-
-      <div class="why-grid">
-        <div class="why-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
-          </svg>
-          <h3>Brzo kad treba brzo</h3>
-          <p>Za dokumenta ne čekate dan ni dva. Slike dobijate u ruke dok ste još u studiju.</p>
+      <div class="visual">
+        <div class="docs-image-main">
+          <img src="assets/Slikanje-za-dokumenta.jpg" alt="Osmehnuta žena slikana za fotografiju za dokumenta u studiju">
         </div>
-        <div class="why-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="4"/><path d="M8 6l1.5-2h5L16 6"/>
-          </svg>
-          <h3>Teren i studio</h3>
-          <p>Ne morate vi da dolazite nama. Za venčanja, krštenja i objekte dolazimo mi na lokaciju.</p>
-        </div>
-        <div class="why-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/>
-          </svg>
-          <h3>Format koji prolazi</h3>
-          <p>Znamo tačne dimenzije za pasoš, ličnu, indeks i knjižicu, pa slika prođe iz prve.</p>
+        <div class="docs-thumbs">
+          <div class="thumb"><img src="assets/1.jpg" alt="Primer fotografije za dokumenta - devojka sa dugom kosom"></div>
+          <div class="thumb"><img src="assets/2.jpg" alt="Primer fotografije za dokumenta - žena tamne kose"></div>
+          <div class="thumb"><img src="assets/3.jpg" alt="Primer fotografije za dokumenta - mladić u rolki"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="kontakt" class="contact">
-    <div class="wrap sec contact-grid">
-      <div>
+  <section id="galerija">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Portfolio</span>
+        <h2>Kako to izgleda</h2>
+        <p>Par fotografija sa naših slikanja, da vidite stil kojim radimo.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="img-wrap">
+            <img src="assets/IGI_6183.jpg" alt="Mladenci na klupi u parku, mladoženja ljubi ruku mladi">
+          </div>
+          <div class="caption">Svadba</div>
+        </div>
+        <div class="gallery-item">
+          <div class="img-wrap">
+            <img src="assets/Krstenje-16.jpg" alt="Sveštenik drži krst tokom obreda krštenja u crkvi">
+          </div>
+          <div class="caption">Krštenje</div>
+        </div>
+        <div class="gallery-item">
+          <div class="img-wrap">
+            <img src="assets/Prijemi-05.jpg" alt="Publika u svečanoj sali na poslovnom prijemu">
+          </div>
+          <div class="caption">Prijem</div>
+        </div>
+        <div class="gallery-item">
+          <div class="img-wrap">
+            <img src="assets/3-1.jpg" alt="Fudbaleri u duelu za loptu na terenu tokom utakmice">
+          </div>
+          <div class="caption">Terensko slikanje</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="o-nama">
+    <div class="wrap about-flex">
+      <div class="visual">
+        <div class="placeholder-block">FOTOGRAFIJA STUDIJA</div>
+      </div>
+      <div class="text">
+        <span class="eyebrow">O nama</span>
+        <h2>Zašto Žika slika</h2>
+        <p>Radimo u Beogradu i izlazimo na teren po potrebi. Svaki posao vodimo isto, bilo da je venčanje sa dvesta gostiju ili slika za đačku knjižicu.</p>
+        <p>Studio je opremljen za portretno i modno slikanje, a za terenske poslove nosimo opremu koja pokriva enterijere, eksterijere i građevinske objekte.</p>
+        <p>Javite se telefonom ili dođite lično - dogovaramo termin koji vama odgovara, a za slike za dokumenta ne treba vam ni to.</p>
+        <a href="#kontakt" class="btn btn-outline">Kontaktirajte nas</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="contact-section">
+    <div class="wrap">
+      <div class="section-head">
         <span class="eyebrow">Kontakt</span>
-        <h2 style="font-size:34px; letter-spacing:-0.3px;">Javite se, dogovorimo termin.</h2>
-        <p style="color:var(--muted); margin-top:14px; font-size:17px;">Za slikanje događaja zakažite unapred da vam čuvamo termin. Za dokumenta samo dođite.</p>
-
-        <div class="info-row">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 5c0 8 7 15 15 15l0-4-4-2-2 2c-3-1.5-5.5-4-7-7l2-2-2-4z"/>
-          </svg>
-          <div>
-            <strong>Telefon</strong>
-            <span>Pozovite radi termina ili pitanja</span>
-          </div>
-        </div>
-
-        <div class="info-row">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 21c-4-4-7-7-7-11a7 7 0 0114 0c0 4-3 7-7 11z"/><circle cx="12" cy="10" r="2.5"/>
-          </svg>
-          <div>
-            <strong>Adresa</strong>
-            <span>Foto studio Žika slika, Beograd</span>
-          </div>
-        </div>
-
-        <div class="info-row">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>
-          </svg>
-          <div>
-            <strong>Email</strong>
-            <span>Pišite nam za ponudu i detalje</span>
-          </div>
-        </div>
-
-        <div class="cta-row">
-          <a href="#" class="btn">Pozovite nas</a>
-          <a href="#" class="btn btn-outline">Pošaljite poruku</a>
-        </div>
+        <h2>Zakažite slikanje</h2>
+        <p>Pozovite nas za svadbe, krštenja, rođendane i terensko slikanje. Za slike za dokumenta ne morate da zakazujete, samo dođite u radno vreme.</p>
       </div>
 
-      <div class="hours-box">
-        <h3>Radno vreme</h3>
-        <div class="hours-line"><span>Ponedeljak</span><span>09:00 - 20:00</span></div>
-        <div class="hours-line"><span>Utorak</span><span>09:00 - 20:00</span></div>
-        <div class="hours-line"><span>Sreda</span><span>09:00 - 20:00</span></div>
-        <div class="hours-line"><span>Četvrtak</span><span>09:00 - 20:00</span></div>
-        <div class="hours-line"><span>Petak</span><span>09:00 - 20:00</span></div>
-        <div class="hours-line"><span>Subota</span><span>09:00 - 15:00</span></div>
-        <div class="hours-line"><span>Nedelja</span><span>Zatvoreno</span></div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6796bf" stroke-width="1.5"><path d="M5 4h3l2 5-2 1a11 11 0 006 6l1-2 5 2v3a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>
+            <div>
+              <h3>Telefon</h3>
+              <p><a href="tel:0112445678">011 2445 678</a></p>
+            </div>
+          </div>
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6796bf" stroke-width="1.5"><path d="M12 21s7-6.5 7-11a7 7 0 10-14 0c0 4.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <div>
+              <h3>Adresa</h3>
+              <p>Bulevar oslobođenja 12, Beograd</p>
+            </div>
+          </div>
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6796bf" stroke-width="1.5"><path d="M5 4h3l2 5-2 1a11 11 0 006 6l1-2 5 2v3a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>
+            <div>
+              <h3>E-mail</h3>
+              <p><a href="mailto:info@zikaslika.rs">info@zikaslika.rs</a></p>
+            </div>
+          </div>
+          <div style="margin-top:24px;">
+            <a href="tel:0112445678" class="btn">Pozovite: 011 2445 678</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6796bf" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <div style="width:100%;">
+              <h3>Radno vreme</h3>
+              <table class="hours-table">
+                <tr><td>Ponedeljak - petak</td><td>09:00 - 20:00</td></tr>
+                <tr><td>Subota</td><td>09:00 - 15:00</td></tr>
+                <tr><td>Nedelja</td><td>Ne radimo</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <div class="wrap foot-grid">
-      <p>© <span id="year"></span> Žika slika · Foto studio, Beograd</p>
-      <div class="foot-links">
-        <a href="#usluge">Usluge</a>
-        <a href="#dokumenta">Dokumenta</a>
-        <a href="#kontakt">Kontakt</a>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-col footer-logo">
+          <img src="assets/logo.png" alt="Žika slika logo">
+          <p>Foto studio u Beogradu - svadbe, krštenja, rođendani, terensko i studijsko slikanje, uramljivanje i brza izrada fotografija za dokumenta.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Stranica</h3>
+          <ul>
+            <li><a href="#usluge">Usluge</a></li>
+            <li><a href="#dokumenta">Dokumenta</a></li>
+            <li><a href="#galerija">Galerija</a></li>
+            <li><a href="#o-nama">O nama</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Kontakt</h3>
+          <p>Bulevar oslobođenja 12, Beograd</p>
+          <p><a href="tel:0112445678">011 2445 678</a></p>
+          <p><a href="mailto:info@zikaslika.rs">info@zikaslika.rs</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 Žika slika. Sva prava zadržana.</span>
+        <span>Beograd, Srbija</span>
       </div>
     </div>
   </footer>
 
-  <script>
-    const ham = document.getElementById('hamburger');
-    const menu = document.getElementById('mobileMenu');
-    ham.addEventListener('click', () => menu.classList.toggle('open'));
-    menu.querySelectorAll('a').forEach(a =>
-      a.addEventListener('click', () => menu.classList.remove('open'))
-    );
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
